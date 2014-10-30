@@ -1,0 +1,82 @@
+body {
+	padding-top: 50px;
+}
+td {
+	padding: 10px;
+}
+
+.form-container {
+	padding-top: 20px;
+	width: 40%;
+	left: 25%;
+	position: absolute;
+	height: 300px; 
+}
+.form-container input {
+	max-width: 200px;
+}
+
+#navi {
+    background-color:#17AB5A;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 75px;
+    z-index: 10;
+    width:20px;
+    height: 60%;
+    left:0px;
+    position: absolute;
+    border-radius: 0px 5px  5px 0px;   
+    box-shadow: 2px 5px 10px black;
+    align-content:top;
+}
+
+#head {
+    width: 100%;
+    height: 50px;
+    background-color: #D8D8D8;
+
+}
+
+#panel {
+    background-color:black;
+    width:100px;
+    height:100%;
+    left: -110px;
+    position: absolute;
+    top: 0px;
+    box-shadow: 2px 3px 20px black;
+    color: gray;
+}
+
+#contentArea {
+    padding-left: 30px;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+}
+
+#navBar {
+    width:100%;
+    height: 50px;
+}
+
+ul {
+    padding: 10px;
+    list-style-type: none;
+}
+
+ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: gray;
+}
+
+ul li a:hover {
+    text-decoration: none;
+    color: white;
+}
