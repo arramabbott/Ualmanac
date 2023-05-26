@@ -103,8 +103,6 @@ def editPlant(_id):
 	output = template("editPlant",data_docs=data_docs, title="Edit Plant") 
 	return output
 
- #pymongo.objectid('4d1a0cecd518230437000000') 
-
 @route('/editplant/<_id>',method="POST")
 def do_editPlant(_id):
 	from pymongo import MongoClient , Connection	
