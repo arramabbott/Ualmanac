@@ -191,47 +191,8 @@ def landing():
 def json():
 	data_docs_raw = db['plants'].find({})
 	data = json.loads(data_docs_raw)
-	#output = template('json',data_docs=data_docs, title="json")
 	print data
 	return template("json", data=data)
-'''
-@route('/upload/<_id>', method="GET")
-def upload(_id):
-	from pymongo import MongoClient , Connection	
-	conn = MongoClient('localhost',27017)
-	db = conn.ualmanac
-	collection = db.plants
-	doc = collection.find_one({"_id": ObjectId(_id)})
-	fs = GridFS(db)
-	plantDocId = _id
-	description = request.forms.get('description')
-	uploadImage = request.files.get('uploadImage')
-	with open(uploadImage) as imageFile:
-		fs.put(imageFile, content_type:"image/jpeg", filename="imageFile")
-	doc[]
-
-
-@route('/upload/<_id>', method="POST")
-def do_upload(_id):
-	from pymongo import MongoClient , Connection	
-	conn = MongoClient('localhost',27017)
-	db = conn.ualmanac
-	fs = GridFS(db)
-	plantDocId = _id
-	description = request.forms.get('description')
-	uploadImage = request.files.get('uploadImage')
-	with open(uploadImage) as imageFile:
-		fs.put(imageFile, content_type:"image/jpeg", filename="imageFile")
-
-
-	if ext == ('.png','.jpg','.jpeg'):
-		return('File extension not allowed') 
-	if description == "":
-		return('Please fill in a description for the image.')
-	if uploadImage == "":
-		return('Please select a image to upload.')
-'''
-
 
 if __name__ == '__main__':
 	run(hostname='localhost',port=8081, reloader=True)
